@@ -1,18 +1,22 @@
 import java.util.*;
 class NumberGenerator{
-    public void ArmstrongChecker(int rdNum){
+    public void ArmstrongChecker(int option){
 
-        int numb=rdNum,arm=0,remainder,check;
+        Random rdNum = new Random();
+        int numb = rdNum.nextInt(100,999);
+        int arm=0,remainder,check=numb;
         check=numb;
         while (numb>0) { 
               remainder=numb%10;
               arm=arm+(int)Math.pow(remainder, 3);
               numb=numb/10;
         }
-        if(check==arm){
-            System.out.println(rdNum);
+        if(check==arm && option==1){
+            System.out.println("Here is Your Armstrong Number ==> " + check);
+        }else if (check!=arm && option==1){
+            ArmstrongChecker(option);        
         }else{
-            System.out.println(rdNum+"This is not");        
+            System.out.println(check+" is non Armstrong Number");
         }
         
     }
@@ -20,17 +24,18 @@ class NumberGenerator{
 public class ArmstrongNumberGenerator {
     public static void main(String[] args) {
 
-        int choice,random;
-        Random r=new Random();
+        int choice;
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter Choice : \n1. Armstrong Number \n2. Non Armstrong Number");
         choice=scan.nextInt();
         NumberGenerator generator=new NumberGenerator();
 
         if (choice==1){
-            generator.ArmstrongChecker(random=r.nextInt(100,999));
+            generator.ArmstrongChecker(1);
+        }else if (choice==2){
+            generator.ArmstrongChecker(2);
         }else{
-
+            System.out.println(" Enter Correct Option");
         }
     }
 }
