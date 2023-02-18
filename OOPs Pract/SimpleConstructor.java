@@ -9,6 +9,6 @@ public class SimpleConstructor {
     }
     public static void main(String[] args) {
         //SimpleConstructor s1 = new SimpleConstructor();
-        SimpleConstructor s2 = new SimpleConstructor("Arjun");
+        SimpleConstructor s2 = new SimpleConstructor("Arjunn");
     }
 }

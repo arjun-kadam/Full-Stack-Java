@@ -2,7 +2,7 @@ public class Armstrong
 {
     public static void main(String[] args) 
     {
-        int num=973,check=num,arm=0,reaminder;
+        int num=123,check=num,arm=0,reaminder;
 
 
         while(num>0){
