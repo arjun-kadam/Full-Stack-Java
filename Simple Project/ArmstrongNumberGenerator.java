@@ -5,7 +5,6 @@ class NumberGenerator{
         Random rdNum = new Random();
         int numb = rdNum.nextInt(100,999);
         int arm=0,remainder,check=numb;
-        check=numb;
         while (numb>0) { 
               remainder=numb%10;
               arm=arm+(int)Math.pow(remainder, 3);
